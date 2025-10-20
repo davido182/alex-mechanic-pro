@@ -92,13 +92,26 @@ const Contact = () => {
             <p className="text-primary-foreground/90 mb-6 text-lg">
               Agenda tu cita hoy mismo y recibe atención profesional de calidad
             </p>
-            <Button 
-              size="lg" 
-              className="bg-background text-primary hover:bg-background/90 text-lg px-8 shadow-lg hover:shadow-xl transition-all duration-300"
-              onClick={() => window.location.href = 'tel:+593967524863'}
-            >
-              Agendar Cita Ahora
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                size="lg" 
+                className="bg-background text-primary hover:bg-background/90 text-lg px-8 shadow-lg hover:shadow-xl transition-all duration-300"
+                onClick={() => window.location.href = 'tel:+593967524863'}
+              >
+                Llamar Ahora
+              </Button>
+              {/* Calendly integration will be added here */}
+              <Button 
+                size="lg" 
+                className="bg-background text-primary hover:bg-background/90 text-lg px-8 shadow-lg hover:shadow-xl transition-all duration-300"
+                onClick={() => {
+                  // TODO: Add Calendly integration here
+                  console.log('Calendly integration pending');
+                }}
+              >
+                Agendar Cita Online
+              </Button>
+            </div>
           </div>
         </div>
       </div>
