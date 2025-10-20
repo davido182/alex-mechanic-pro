@@ -45,10 +45,10 @@ const Footer = () => {
           <div className="text-center md:text-right">
             <h4 className="text-lg font-semibold text-background mb-4">Información</h4>
             <ul className="space-y-2 text-muted text-sm">
-              <li>Av. Principal #123</li>
-              <li>Colonia Centro</li>
-              <li>Tel: 555-1234 / 555-5678</li>
-              <li>info@talleralex8a.com</li>
+              <li>Anton Philips y Teodoro Wolf</li>
+              <li>Loja, Ecuador</li>
+              <li>Tel: +593 96 752 4863</li>
+              <li>talleralex8am@gmail.com</li>
             </ul>
           </div>
         </div>

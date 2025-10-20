@@ -45,7 +45,7 @@ const Hero = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-2 border-primary text-background hover:bg-primary hover:text-primary-foreground transition-all duration-300 text-lg px-8"
+              className="border-2 border-foreground bg-foreground text-background hover:bg-foreground/90 transition-all duration-300 text-lg px-8"
               onClick={() => document.getElementById('servicios')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Nuestros Servicios

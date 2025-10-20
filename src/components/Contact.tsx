@@ -7,13 +7,13 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Teléfono",
-    details: ["555-1234", "555-5678"],
-    link: "tel:5551234"
+    details: ["+593 96 752 4863"],
+    link: "tel:+593967524863"
   },
   {
     icon: MapPin,
     title: "Dirección",
-    details: ["Av. Principal #123", "Colonia Centro, CP 12345"],
+    details: ["Anton Philips y Teodoro Wolf", "Loja, Ecuador"],
     link: null
   },
   {
@@ -25,8 +25,8 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    details: ["info@talleralex8a.com"],
-    link: "mailto:info@talleralex8a.com"
+    details: ["talleralex8am@gmail.com"],
+    link: "mailto:talleralex8am@gmail.com"
   }
 ];
 
@@ -95,7 +95,7 @@ const Contact = () => {
             <Button 
               size="lg" 
               className="bg-background text-primary hover:bg-background/90 text-lg px-8 shadow-lg hover:shadow-xl transition-all duration-300"
-              onClick={() => window.location.href = 'tel:5551234'}
+              onClick={() => window.location.href = 'tel:+593967524863'}
             >
               Agendar Cita Ahora
             </Button>
