@@ -8,9 +8,17 @@ const WhatsAppButton = () => {
   
   const handleWhatsAppClick = () => {
     if (!whatsappNumber) {
-      console.warn("WhatsApp number not configured yet");
+      // Configuration not complete - silently return in production
       return;
     }
+    
+    // Validate WhatsApp number format (digits only, 10-15 characters)
+    const phoneRegex = /^\d{10,15}$/;
+    if (!phoneRegex.test(whatsappNumber)) {
+      // Invalid phone number format - silently return in production
+      return;
+    }
+    
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(defaultMessage)}`;
     window.open(url, '_blank');
   };

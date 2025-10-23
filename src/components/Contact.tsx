@@ -110,11 +110,22 @@ const Contact = () => {
                   const calendlyUrl = ""; // Add your Calendly scheduling link here
                   
                   if (!calendlyUrl) {
-                    console.warn("Calendly URL not configured yet");
+                    // Configuration not complete - silently return in production
                     return;
                   }
                   
-                  window.open(calendlyUrl, '_blank');
+                  // Validate URL is from calendly.com domain
+                  try {
+                    const url = new URL(calendlyUrl);
+                    if (!url.hostname.endsWith('calendly.com') || url.protocol !== 'https:') {
+                      // Invalid Calendly URL - silently return in production
+                      return;
+                    }
+                    window.open(calendlyUrl, '_blank');
+                  } catch {
+                    // Invalid URL format - silently return in production
+                    return;
+                  }
                 }}
               >
                 Agendar Cita Online
