@@ -15,6 +15,40 @@ const WhatsAppButton = () => {
     window.open(url, '_blank');
   };
 
+  /* 
+   * OPCIÓN 2: CHAT WIDGET CON IA AUTOMATIZADO
+   * 
+   * Para implementar un chat widget con bot de IA integrado:
+   * 
+   * 1. Habilitar Lovable Cloud (backend automático)
+   * 2. Crear un componente ChatWidget que incluya:
+   *    - Botón flotante para abrir/cerrar chat
+   *    - Ventana de chat con historial de mensajes
+   *    - Input para escribir mensajes
+   *    - Integración con OpenAI/ElevenLabs para respuestas automatizadas
+   * 
+   * 3. Crear Edge Function para manejar:
+   *    - Llamadas a API de IA (OpenAI/ElevenLabs)
+   *    - Guardar historial de conversaciones en base de datos
+   *    - Detectar intención de agendar cita y conectar con Calendly
+   *    - Responder preguntas sobre servicios del taller
+   * 
+   * 4. Entrenar el bot con información específica:
+   *    - Servicios del taller
+   *    - Precios aproximados
+   *    - Horarios de atención
+   *    - Proceso de agendamiento
+   * 
+   * Ventajas sobre WhatsApp:
+   *    - Control total del chat
+   *    - Sin límites de mensajes
+   *    - Datos guardados en tu base de datos
+   *    - Personalización completa
+   *    - Integración directa con Calendly
+   * 
+   * Para activar: Reemplazar este componente WhatsAppButton con ChatWidget
+   */
+
   return (
     <Button
       onClick={handleWhatsAppClick}
