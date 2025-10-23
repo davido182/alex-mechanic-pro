@@ -105,8 +105,16 @@ const Contact = () => {
                 size="lg" 
                 className="bg-background text-primary hover:bg-background/90 text-lg px-8 shadow-lg hover:shadow-xl transition-all duration-300"
                 onClick={() => {
-                  // TODO: Add Calendly integration here
-                  console.log('Calendly integration pending');
+                  // TODO: Replace with your Calendly link
+                  // Example: https://calendly.com/your-username/appointment
+                  const calendlyUrl = ""; // Add your Calendly scheduling link here
+                  
+                  if (!calendlyUrl) {
+                    console.warn("Calendly URL not configured yet");
+                    return;
+                  }
+                  
+                  window.open(calendlyUrl, '_blank');
                 }}
               >
                 Agendar Cita Online
