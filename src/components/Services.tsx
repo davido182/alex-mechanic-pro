@@ -5,13 +5,23 @@ import heroBackground from "@/assets/hero-background.jpg";
 const services = [
   {
     icon: Wrench,
-    title: "Mantenimiento General",
-    description: "Cambio de aceite, filtros, y revisión completa de todos los sistemas del vehículo"
+    title: "Cambios de Aceite",
+    description: "Cambio de aceite y filtros con productos de calidad para proteger tu motor"
   },
   {
     icon: Cog,
-    title: "Reparación de Motor",
-    description: "Diagnóstico y reparación especializada de motores con tecnología avanzada"
+    title: "ABC de Motor",
+    description: "Revisión completa y mantenimiento integral del motor de tu vehículo"
+  },
+  {
+    icon: Car,
+    title: "ABC de Frenos",
+    description: "Revisión y mantenimiento completo del sistema de frenos para tu seguridad"
+  },
+  {
+    icon: Zap,
+    title: "ABC de Suspensión",
+    description: "Diagnóstico y mantenimiento completo del sistema de suspensión"
   },
   {
     icon: Gauge,
@@ -19,19 +29,9 @@ const services = [
     description: "Escaneo y diagnóstico con equipos de última generación para detectar fallas"
   },
   {
-    icon: Zap,
-    title: "Sistema Eléctrico",
-    description: "Reparación de sistemas eléctricos, alternadores, baterías y sensores"
-  },
-  {
-    icon: Car,
-    title: "Suspensión y Frenos",
-    description: "Revisión y reparación completa del sistema de suspensión y frenos"
-  },
-  {
     icon: Shield,
-    title: "Revisión Preventiva",
-    description: "Mantenimiento preventivo para evitar averías y prolongar la vida útil"
+    title: "Diagnóstico y Limpieza de Inyectores",
+    description: "Limpieza profesional de inyectores para optimizar el rendimiento del motor"
   }
 ];
 

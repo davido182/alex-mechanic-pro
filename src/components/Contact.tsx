@@ -105,9 +105,10 @@ const Contact = () => {
                 size="lg" 
                 className="bg-background text-primary hover:bg-background/90 text-lg px-8 shadow-lg hover:shadow-xl transition-all duration-300"
                 onClick={() => {
-                  // TODO: Replace with your Calendly link
-                  // Example: https://calendly.com/your-username/appointment
-                  const calendlyUrl = ""; // Add your Calendly scheduling link here
+                  // CONFIGURACIÓN: Agrega tu enlace de Calendly aquí o usa variables de entorno
+                  // Para usar variables de entorno: import.meta.env.VITE_CALENDLY_URL
+                  // Formato: https://calendly.com/tu-usuario/30min
+                  const calendlyUrl = ""; // O usa: import.meta.env.VITE_CALENDLY_URL || ""
                   
                   if (!calendlyUrl) {
                     // Configuration not complete - silently return in production

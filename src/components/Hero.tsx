@@ -31,7 +31,7 @@ const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-muted mb-8 animate-in slide-in-from-bottom duration-700 delay-300">
-            Servicio profesional de mecánica automotriz con tecnología de última generación
+            ¡Cuidamos tu auto como si fuera nuestro!
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-in slide-in-from-bottom duration-700 delay-500">

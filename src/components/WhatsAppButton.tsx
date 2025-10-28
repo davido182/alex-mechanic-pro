@@ -2,8 +2,10 @@ import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const WhatsAppButton = () => {
-  // TODO: Add your WhatsApp business number here
-  const whatsappNumber = ""; // Format: 593967524863 (country code + number, no + or spaces)
+  // CONFIGURACIÓN: Agrega tu número de WhatsApp aquí o usa variables de entorno
+  // Para usar variables de entorno: import.meta.env.VITE_WHATSAPP_NUMBER
+  // Formato: solo números, sin + ni espacios (ejemplo: 523331234567)
+  const whatsappNumber = ""; // O usa: import.meta.env.VITE_WHATSAPP_NUMBER || ""
   const defaultMessage = "Hola, me gustaría agendar una cita para mi vehículo";
   
   const handleWhatsAppClick = () => {
