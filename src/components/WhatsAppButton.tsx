@@ -4,24 +4,12 @@ import { Button } from "@/components/ui/button";
 const WhatsAppButton = () => {
   // CONFIGURACIÓN: Agrega tu número de WhatsApp en el archivo .env.local
   // Crea un archivo .env.local en la raíz del proyecto y agrega:
-  // VITE_WHATSAPP_NUMBER=523331234567 (tu número sin + ni espacios)
-  // O puedes agregar el número directamente aquí: const whatsappNumber = "523331234567";
-  const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER || "";
+  // VITE_WHATSAPP_NUMBER=593967524863 (tu número sin + ni espacios)
+  // O puedes agregar el número directamente aquí: const whatsappNumber = "593967524863";
+  const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER || "593967524863";
   const defaultMessage = "Hola, me gustaría agendar una cita para mi vehículo";
   
   const handleWhatsAppClick = () => {
-    if (!whatsappNumber) {
-      // Configuration not complete - silently return in production
-      return;
-    }
-    
-    // Validate WhatsApp number format (digits only, 10-15 characters)
-    const phoneRegex = /^\d{10,15}$/;
-    if (!phoneRegex.test(whatsappNumber)) {
-      // Invalid phone number format - silently return in production
-      return;
-    }
-    
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(defaultMessage)}`;
     window.open(url, '_blank');
   };
