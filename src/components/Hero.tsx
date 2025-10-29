@@ -30,27 +30,9 @@ const Hero = () => {
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted mb-8 animate-in slide-in-from-bottom duration-700 delay-300">
+          <p className="text-xl md:text-2xl text-muted animate-in slide-in-from-bottom duration-700 delay-300">
             ¡Cuidamos tu auto como si fuera nuestro!
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-in slide-in-from-bottom duration-700 delay-500">
-            <Button 
-              size="lg" 
-              className="bg-gradient-to-r from-primary to-secondary hover:shadow-[0_0_40px_hsl(var(--primary)/0.5)] transition-all duration-300 text-lg px-8"
-              onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Contáctanos
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-2 border-foreground bg-foreground text-background hover:bg-foreground/90 transition-all duration-300 text-lg px-8"
-              onClick={() => document.getElementById('servicios')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Nuestros Servicios
-            </Button>
-          </div>
         </div>
       </div>
       
