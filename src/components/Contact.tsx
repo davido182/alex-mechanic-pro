@@ -105,28 +105,11 @@ const Contact = () => {
                 size="lg" 
                 className="bg-background text-primary hover:bg-background/90 text-lg px-8 shadow-lg hover:shadow-xl transition-all duration-300"
                 onClick={() => {
-                  // CONFIGURACIÓN: Agrega tu enlace de Calendly aquí o usa variables de entorno
-                  // Para usar variables de entorno: import.meta.env.VITE_CALENDLY_URL
-                  // Formato: https://calendly.com/tu-usuario/30min
-                  const calendlyUrl = ""; // O usa: import.meta.env.VITE_CALENDLY_URL || ""
-                  
-                  if (!calendlyUrl) {
-                    // Configuration not complete - silently return in production
-                    return;
-                  }
-                  
-                  // Validate URL is from calendly.com domain
-                  try {
-                    const url = new URL(calendlyUrl);
-                    if (!url.hostname.endsWith('calendly.com') || url.protocol !== 'https:') {
-                      // Invalid Calendly URL - silently return in production
-                      return;
-                    }
-                    window.open(calendlyUrl, '_blank');
-                  } catch {
-                    // Invalid URL format - silently return in production
-                    return;
-                  }
+                  // CONFIGURACIÓN: Enlace de Calendly
+                  // Para usar variables de entorno, crea .env.local y agrega:
+                  // VITE_CALENDLY_URL=https://calendly.com/tu-usuario/30min
+                  const calendlyUrl = import.meta.env.VITE_CALENDLY_URL || "https://calendly.com/talleralex8a";
+                  window.open(calendlyUrl, '_blank');
                 }}
               >
                 Agendar Cita Online

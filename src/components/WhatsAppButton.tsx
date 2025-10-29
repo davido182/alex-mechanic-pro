@@ -1,4 +1,4 @@
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const WhatsAppButton = () => {
@@ -60,14 +60,30 @@ const WhatsAppButton = () => {
    * Para activar: Reemplazar este componente WhatsAppButton con ChatWidget
    */
 
+  const calendlyUrl = import.meta.env.VITE_CALENDLY_URL || "https://calendly.com/talleralex8a";
+
   return (
-    <Button
-      onClick={handleWhatsAppClick}
-      className="fixed bottom-6 right-6 z-50 h-14 w-14 rounded-full bg-[#25D366] hover:bg-[#20BA5A] shadow-lg hover:shadow-xl transition-all duration-300 p-0 hover:scale-110"
-      aria-label="Contactar por WhatsApp"
-    >
-      <MessageCircle className="h-7 w-7 text-white" />
-    </Button>
+    <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+      {/* Botón de WhatsApp */}
+      <Button
+        onClick={handleWhatsAppClick}
+        className="group relative bg-[#25D366] hover:bg-[#20BA5A] shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 h-auto py-3 px-5 rounded-full flex items-center gap-3"
+        aria-label="Contactar por WhatsApp"
+      >
+        <MessageCircle className="h-6 w-6 text-white" />
+        <span className="text-white font-semibold">¡Chatea con nosotros!</span>
+      </Button>
+      
+      {/* Botón de Calendly */}
+      <Button
+        onClick={() => window.open(calendlyUrl, '_blank')}
+        className="group relative bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 h-auto py-3 px-5 rounded-full flex items-center gap-3"
+        aria-label="Agendar cita en Calendly"
+      >
+        <Clock className="h-6 w-6 text-primary-foreground" />
+        <span className="text-primary-foreground font-semibold">¡Agenda tu cita!</span>
+      </Button>
+    </div>
   );
 };
 
